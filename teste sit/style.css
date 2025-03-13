@@ -1,0 +1,199 @@
+/* Reset */
+body, h1, h2, p {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to bottom, #000000, #00d9ff);
+    color: rgb(255, 255, 255);
+    text-align: center;
+}
+
+/* Seção do Hero com Altura Definida */
+.hero {
+    position: relative;
+    width: 100%;
+    height: 80vh; /* Define um espaço fixo para evitar sobreposição */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Carrossel Centralizado */
+.carousel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Ajuste das Imagens do Carrossel */
+.carousel-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out;
+}
+
+/* Imagem ativa */
+.carousel-image.active {
+    opacity: 1;
+}
+
+/* Seção de Conteúdo (Texto + Botão) */
+.hero-content {
+    position: absolute;
+    z-index: 10;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 10px;
+    width: 90%;
+    max-width: 600px;
+    color: white;
+}
+
+h1 {
+    font-size: 2.5em;
+}
+
+.cta-button {
+    background-color: #ffcc00;
+    color: #121212;
+    padding: 15px 25px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 5px;
+    display: inline-block;
+    margin-top: 15px;
+    transition: background 0.3s;
+}
+
+.cta-button:hover {
+    background-color: #ff9900;
+}
+
+
+
+/* Features Section */
+.features {
+    display: flex;
+    justify-content: space-around;
+    padding: 50px 20px;
+}
+
+.feature {
+    max-width: 300px;
+    background: linear-gradient(#000000, #00d9ff );
+    padding: 20px;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+    box-shadow: 0px 4px 10px rgb(255, 255, 255);
+}
+
+.feature:hover {
+    transform: translateY(-5px);
+    background: linear-gradient(90deg, #ffcc00, #ffcc00);
+}
+
+/* Estilização da Seção do Formulário */
+.form-section {
+    padding: 50px;
+    background: #d9ff00ad, #00d9ff;
+    text-align: center;
+    border-radius: 10px;
+    max-width: 500px;
+    margin: 50px auto;
+    box-shadow: 0px 4px 10px rgb(255, 255, 255);
+}
+
+/* Título do Formulário */
+.form-section h2 {
+    font-size: 1.8em;
+    margin-bottom: 10px;
+    color: #ffcc00;
+}
+
+.form-section p {
+    font-size: 1em;
+    color: #ffffff;
+    margin-bottom: 20px;
+}
+
+/* Campo de Input */
+input {
+    width: 85%;
+    padding: 15px;
+    font-size: 1em;
+    border: 2px solid #000000;
+    border-radius: 30px;
+    outline: none;
+    transition: 0.3s;
+    background: #00d9ff;
+    color: rgb(0, 0, 0);
+    text-align: center;
+}
+
+input:focus {
+    border-color: #ffcc00;
+    background: #ffcc00;
+    transform: scale(1.05);
+}
+
+/* Botão de Envio */
+button {
+    width: 90%;
+    padding: 15px;
+    font-size: 1.1em;
+    font-weight: bold;
+    color: #ffffff;
+    background: linear-gradient(90deg, #000000, #00d9ff);
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+    margin-top: 10px;
+}
+
+button:hover {
+    background: linear-gradient(90deg, #ffcc00, #ffcc00);
+    transform: scale(1.05);
+}
+
+/* Mensagem de Sucesso */
+#msg-sucesso {
+    color: #00ff88;
+    margin-top: 15px;
+    font-weight: bold;
+}
+
+/* Logo Styling */
+.logo {
+    position: fixed;
+    top: 50px;
+    right: 210px;
+    font-size: 3rem;
+    font-weight: bold;
+    z-index: 100;
+    background: linear-gradient(to right, #ffffff, #ffffff);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+    text-shadow: 0px 2px 8px rgba(0, 217, 255, 0.5);
+    letter-spacing: 1px;
+    transform: skew(-5deg);
+    transition: all 0.3s ease;
+    font-family: 'Arial', sans-serif;
+}
+
+.logo:hover {
+    transform: skew(-5deg) scale(1.1);
+    text-shadow: 0px 4px 12px rgba(0, 217, 255, 0.8);
+}
